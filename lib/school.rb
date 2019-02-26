@@ -18,8 +18,9 @@ class School
 
   def sort
     @roster.sort {|a,b| a[1]<=>b[1]}
+    new_hash = {}
     @roster.each do |grade, students|
-      grade && students.sort
+      new_hash[grade] = students.sort
     end
     #  binding.pry
   end
