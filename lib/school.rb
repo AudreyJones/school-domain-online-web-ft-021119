@@ -17,11 +17,10 @@ class School
   end
 
   def sort
-    @roster.sort
-    # @roster.sort {|a,b| a[1]<=>b[1]}
-    # @roster.each do |grade, students|
-    #   grade && students.sort
-    # end
+    @roster.sort {|a,b| a[1]<=>b[1]}
+    @roster.each do |grade, students|
+      grade && students.sort
+    end
      binding.pry
   end
 end
